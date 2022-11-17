@@ -14,6 +14,7 @@ function getNameOfWeek($dayNumber){
     if ($dayNumber == 7) return 'Domingo';  */
     $days = array ('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo');
 
+    if ($dayNumber == null) return 'No has pasado el dia de la semana';
     if ($dayNumber < 1 || $dayNumber > count($days)) return 'Error en el dia de la semana';
 
     return $days[$dayNumber-1];   
