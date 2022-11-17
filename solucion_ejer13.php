@@ -5,16 +5,20 @@
 */
 
 function getNameOfWeek($dayNumber){
-    if ($dayNumber == 1) echo 'Lunes';
-    else if ($dayNumber == 2) echo 'Martes';
-    else if ($dayNumber == 3) echo 'Miercoles';
-    else if ($dayNumber == 4) echo 'Jueves';
-    else if ($dayNumber == 5) echo 'Viernes';
-    else if ($dayNumber == 6) echo 'Sabado';
-    else if ($dayNumber == 7) echo 'Domingo'; 
+   /*  if ($dayNumber == 1) return 'Lunes';
+    if ($dayNumber == 2) return 'Martes';
+    if ($dayNumber == 3) return 'Miercoles';
+    if ($dayNumber == 4) return 'Jueves';
+    if ($dayNumber == 5) return 'Viernes';
+    if ($dayNumber == 6) return 'Sabado';
+    if ($dayNumber == 7) return 'Domingo';  */
+    $days = array ('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo');
+
+    if ($dayNumber < 1 || $dayNumber > count($days)) return 'Error en el dia de la semana';
+
+    return $days[$dayNumber-1];   
 }
 
-$day = 4;
-echo getNameOfWeek($day);
+echo getNameOfWeek(4);
 
 ?>

@@ -7,8 +7,9 @@ y nos diga si ese numero esta dentro del array
 
 function isOnTheList($list, $value) {
     for ($i = 0; $i <= count($list); $i++) {
-        if ($i == $value) return true;
+        if ($list[$i] == $value) return true;
     }
+    return false;
 }
 
 $myList = array (1,4,6,9);
